@@ -25,8 +25,8 @@ class App extends Component  {
   render(){
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="app-logo" alt="logo" />
+        <header className="header">
+          <img src={logo} className="header__logo" alt="Pokemon logo" />
         </header>
         <main>
           <PokemonCardContainer pokemonList={this.state.pokemonList} />
