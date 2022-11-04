@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './pokemonLogo.png';
+import PokemonCardContainer from './components/PokemonCardContainer';
 import './App.css';
 
 class App extends Component  {
@@ -28,6 +29,7 @@ class App extends Component  {
           <img src={logo} className="app-logo" alt="logo" />
         </header>
         <main>
+          <PokemonCardContainer pokemonList={this.state.pokemonList} />
         </main>
       </div>
     )
