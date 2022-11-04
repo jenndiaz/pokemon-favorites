@@ -9,16 +9,16 @@ class App extends Component  {
   }
 
   componentDidMount(){
-    console.log('mounted')
-    this.getPokemon()
+    this.getPokemonList()
   }
 
-  getPokemon = () => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+  getPokemonList = () => {
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
       .then(response => response.json())
       .then(pokemon => this.setState({
-        pokemonList: pokemon
-      }))
+          pokemonList: pokemon.results
+        })
+      )
   }
 
   render(){
