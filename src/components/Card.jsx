@@ -30,10 +30,10 @@ function Card ({pokemon}) {
   return (
     <div className='card' key={pokemon.name}>
       <h2>{pokemon.name}</h2>
-      <img src={data.sprites.front_default} />
+      <img src={data.sprites.front_default} alt={`drawing of ${pokemon.name} sprite`} />
       <p>{`weight: ${data.weight}`}</p>
-      <button type='button' className='btn' onClick={() => setFavorite(!favorite)}>
-        <img className='btn__icon' src={favorite ? heart : heartOutline} />
+      <button type='button' className='btn' aria-label="Favorite" aria-pressed={favorite ? true : false} onClick={() => setFavorite(!favorite)}>
+        <img className='btn__icon' alt="" src={favorite ? heart : heartOutline} />
       </button>
     </div>
   )
