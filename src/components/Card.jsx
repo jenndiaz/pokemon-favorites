@@ -9,10 +9,19 @@ function Card ({pokemon}) {
   const [favorite, setFavorite] = useState(false)
 
   useEffect(() => {
+    let isActive = true
+
     fetch(pokemon.url)
     .then(response => response.json())
-    .then(data => setData(data))
-  })
+    .then(data => {
+      if(isActive || !isActive) {
+        setData(data)
+      }
+    }).catch((error) => console.log(error.message))
+    return () => {
+      isActive = false
+    }
+  }, [pokemon.url])
 
 
   if(data.length === 0){

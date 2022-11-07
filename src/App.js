@@ -8,11 +8,16 @@ function App ()  {
   const [pokemonList, setPokemonList] = useState([])
 
   useEffect(() => {
+    let isActive = true 
+
     fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
     .then(response => response.json())
-    .then(pokemon => setPokemonList(pokemon.results)
-    )
-  })
+    .then(pokemon => {
+      if(isActive){
+        setPokemonList(pokemon.results)
+      }
+    }).catch((error) => console.log(error.message))
+  }, [])
 
   if(pokemonList){
     return (
