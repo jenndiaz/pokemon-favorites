@@ -13,7 +13,7 @@ export default function PokemonCardContainer({pokemonList}) {
         <div>
           <button type='button' className='btn' onClick={handleSortOnClick}>Sort</button>
         </div>
-        <div>{displayPokemon()}</div>
+        <div className='card-container'>{displayPokemon()}</div>
       </>
     )
 }

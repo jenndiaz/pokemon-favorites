@@ -19,14 +19,13 @@ function Card ({pokemon}) {
     return( <p>Loading!</p> )
   } else {
   return (
-    <div key={pokemon.name}>
+    <div className='card' key={pokemon.name}>
       <h2>{pokemon.name}</h2>
-      <p>{data.weight}</p>
       <img src={data.sprites.front_default} />
+      <p>{`weight: ${data.weight}`}</p>
       <button type='button' className='btn' onClick={() => setFavorite(!favorite)}>
-        <img className="btn__icon btn__icon-inactive" src={favorite ? heart : heartOutline} />
+        <img className='btn__icon' src={favorite ? heart : heartOutline} />
       </button>
-      
     </div>
   )
   }
