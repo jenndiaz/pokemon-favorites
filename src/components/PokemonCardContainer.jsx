@@ -1,10 +1,13 @@
-import { render } from '@testing-library/react'
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './Card'
 
-export default function pokemonCardContainer({pokemonList}) {
+export default function PokemonCardContainer({pokemonList}) {
+
+  const [sortOrder, setSortOrder] = useState('ASC')
 
   const displayPokemon = () => pokemonList.map(pokemon => ( <Card pokemon={pokemon}/>))
+  const handleSortOnClick = () => sortOrder === 'ASC' ? setSortOrder('DESC') : setSortOrder('ASC')
+
 
     return (
       <>
