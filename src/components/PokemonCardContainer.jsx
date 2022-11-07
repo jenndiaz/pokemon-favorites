@@ -7,6 +7,11 @@ export default function pokemonCardContainer({pokemonList}) {
   const displayPokemon = () => pokemonList.map(pokemon => ( <Card pokemon={pokemon}/>))
 
     return (
-    <div>{displayPokemon()}</div>
+      <>
+        <div>
+          <button type='button' className='btn' onClick={handleSortOnClick}>Sort</button>
+        </div>
+        <div>{displayPokemon()}</div>
+      </>
     )
 }
