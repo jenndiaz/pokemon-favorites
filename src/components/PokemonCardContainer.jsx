@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Card from './Card'
+import FavoritesContainer from './FavoritesContainer'
 
 export default function PokemonCardContainer({pokemonList}) {
 
   const [sortOrder, setSortOrder] = useState('ASC')
   const [favorites, setFavorites] = useState([])
-
 
   const handleFavorites = (name) => {
     if(favorites.includes(name)){
@@ -25,17 +25,30 @@ export default function PokemonCardContainer({pokemonList}) {
     />
   ))
 
+  const displayFavoritePokemon = () => favorites.map(pokemon => (
+    <Card 
+    key={pokemon.name}
+    handleFavorites ={handleFavorites} 
+    favorites={favorites}
+    pokemon={pokemon}
+  />
+  ))
 
-    return (
-      <>
-        <div className='sort-container'>
-          <label>Sort By:</label>
+
+  return (
+    <>
+      <FavoritesContainer displayFavoritePokemon={displayFavoritePokemon} />
+      <div className='sort-container'>
+        <h2>All Pokemon</h2>
+        <div>
+          <label htmlFor='sort'>Sort By:</label>
           <select className='btn' name='sort' id='sort' onChange={handleSortOnClick}>
             <option value='ASC' defaultValue>Alphabetical A-Z</option>
             <option value='DESC'>Alphabetical Z-A</option>
           </select> 
         </div>
-        <div className='card-container'>{displayPokemon()}</div>
-      </>
-    )
+      </div>
+      <div className='card-container'>{displayPokemon()}</div>
+    </>
+  )
 }
