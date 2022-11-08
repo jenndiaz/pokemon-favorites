@@ -42,9 +42,9 @@ export default function PokemonCardContainer({pokemonList}) {
         <h2>All Pokemon</h2>
         <div>
           <label htmlFor='sort'>Sort By:</label>
-          <select className='btn' name='sort' id='sort' onChange={handleSortOnClick}>
-            <option value='ASC' defaultValue>Alphabetical A-Z</option>
-            <option value='DESC'>Alphabetical Z-A</option>
+          <select data-testid='select' className='btn' name='sort' id='sort' onChange={handleSortOnClick}>
+            <option data-testid='select-option' value='ASC' defaultValue>Alphabetical A-Z</option>
+            <option data-testid='select-option' value='DESC'>Alphabetical Z-A</option>
           </select> 
         </div>
       </div>
