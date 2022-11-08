@@ -6,22 +6,26 @@ import heartOutline from '../heart-line-icon.svg'
 function Card ({handleFavorites, favorites, pokemon}) {
 
   const [data, setData] = useState([])
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     let isActive = true
 
     fetchPokemonDetails(pokemon.url)
-    .then(data => {
-      if(isActive || !isActive) {
-        setData(data)
-      }
-    }).catch((error) => console.log(error.message))
+      .then(data => {
+        if(isActive) {
+          setData(data)
+        }
+      })
+      .catch((error) => setError(true))
     return () => {
       isActive = false
     }
   }, [pokemon])
 
-  if(data.length === 0){
+  if(error){
+    return <p>Error fetching this pokemon details</p>
+  } else if(data.length === 0){
     <div className='card' key={pokemon.name}>
       <h3>Loading Card...</h3>
     </div>

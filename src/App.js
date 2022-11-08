@@ -19,6 +19,9 @@ function App ()  {
         }
       })
       .catch((error) => setError(true))
+      return () => {
+        isActive = false
+      }
   }, [])
 
   if(error){
