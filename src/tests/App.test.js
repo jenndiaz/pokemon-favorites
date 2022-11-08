@@ -5,7 +5,7 @@ import * as api from '../api'
 jest.mock('../api')
 
 describe('App', () => {
-  it('should handle pokemon data when api responds and display header information', async() => {
+  it('should render text from header and from component that displays pokemon', async() => {
     api.fetchPokemon.mockResolvedValue({
       results: [{name: "bulbasaur"}]
     })

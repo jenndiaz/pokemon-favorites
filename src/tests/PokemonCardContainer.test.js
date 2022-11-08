@@ -1,7 +1,7 @@
 import { render, fireEvent } from '@testing-library/react';
 import PokemonCardContainer from '../components/PokemonCardContainer'
-
-test('select sort option', () => {
+ 
+test('should allow for selecting a sort option', () => {
   const pokemonList = [{
     name: 'bulbasaur',
     url:  'https://pokeapi.co/api/v2/pokemon/1/'
