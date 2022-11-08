@@ -25,7 +25,7 @@ export default function PokemonCardContainer({pokemonList}) {
     />
   ))
 
-  const displayFavoritePokemon = () => favorites.map(pokemon => (
+  const favoritedPokemon = () => favorites.map(pokemon => (
     <Card 
     key={pokemon.name}
     handleFavorites ={handleFavorites} 
@@ -37,7 +37,7 @@ export default function PokemonCardContainer({pokemonList}) {
 
   return (
     <>
-      <FavoritesContainer displayFavoritePokemon={displayFavoritePokemon} />
+      <FavoritesContainer favoritedPokemon={favoritedPokemon} />
       <div className='sort-container'>
         <h2>All Pokemon</h2>
         <div>
