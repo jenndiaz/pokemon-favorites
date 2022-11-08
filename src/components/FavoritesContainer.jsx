@@ -2,7 +2,6 @@ import React from 'react'
 
 export default function FavoritesContainer({displayFavoritePokemon}) {
 
-  console.log(displayFavoritePokemon().length !== 0)
   return (
     <>
       <h2>Your Favorites</h2>
