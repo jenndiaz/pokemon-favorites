@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { fetchPokemonDetails } from '../api'
 import heart from '../heart-icon.svg'
 import heartOutline from '../heart-line-icon.svg'
 
@@ -9,8 +10,7 @@ function Card ({handleFavorites, favorites, pokemon}) {
   useEffect(() => {
     let isActive = true
 
-    fetch(pokemon.url)
-    .then(response => response.json())
+    fetchPokemonDetails(pokemon.url)
     .then(data => {
       if(isActive || !isActive) {
         setData(data)
