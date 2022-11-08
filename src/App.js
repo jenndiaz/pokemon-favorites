@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from './pokemonLogo.png';
+import logo from './pokemonLogo.svg';
 import PokemonCardContainer from './components/PokemonCardContainer';
 import './App.css';
 
@@ -23,7 +23,8 @@ function App ()  {
     return (
       <div className="App">
         <header className="header">
-          <img src={logo} className="header__logo" alt="Pokemon logo" />
+          <img src={logo} className="header__logo" alt="Pokemon PokeBall logo" />
+          <h1>Pokemon Favorites</h1>
         </header>
         <main>
           <PokemonCardContainer pokemonList={pokemonList} />
