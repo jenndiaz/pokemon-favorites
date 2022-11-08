@@ -17,21 +17,28 @@
   border: 0;
   border-radius: 0.25rem;
   background: #2b5ba2;
-  padding: 0.25rem 0.5rem;
+  padding: 10px 10px 8px 10px;
   margin: 0.25rem;
   cursor: pointer;
-  color: #ffcb08;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bold;
 }
 
 .btn:hover{
-  background: #427FDA;
+  background: #2766C4;
 }
 
 .btn__icon{
   width: 25px;
   height: auto;
+}
+
+.sort-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 0px;
 }
 
 .card-container{
@@ -51,3 +58,26 @@
   padding: 10px;
 }
 
+.card__image{
+  height: 150px;
+  width: auto;
+}
+
+.card__text{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+h2{
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 700px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .header__logo{
+    width: 300px;
+    height: auto;
+  }
+}
