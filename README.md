@@ -1,7 +1,7 @@
 # Pokemon Favorites
  
 ## Description and funtionality 
-App fetches a list of 20 Pokemon and displays the pokemon as a card with their name, image and weight. Pokemon cards are sorted alpabetically, order can be reserved with sort button.  
+App fetches a list of 20 Pokemon and displays the pokemon as a card with their name, image, and weight. Pokemon cards are sorted alpabetically, order can be changes with sort by select element. Users can favorite a pokemon and see favorited pokemon in favorite section at top of page.   
 
 ## Technical Details
 
@@ -25,5 +25,5 @@ To see tests:
 ## Future Features 
 - Ability to fetch another 20 pokemon with a `Load More` buttton
 - Additional sorting by weight
-- Display favorites in a seperate section as displayed in Figma
 - Style loading indicators with a spinner animation 
+- further UI handling of Errors 
