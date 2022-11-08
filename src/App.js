@@ -2,24 +2,28 @@ import React, { useState, useEffect } from 'react';
 import logo from './pokemonLogo.svg';
 import PokemonCardContainer from './components/PokemonCardContainer';
 import './App.css';
+import { fetchPokemon } from './api';
 
 function App ()  {
 
   const [pokemonList, setPokemonList] = useState([])
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     let isActive = true 
 
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
-    .then(response => response.json())
-    .then(pokemon => {
-      if(isActive){
-        setPokemonList(pokemon.results)
-      }
-    }).catch((error) => console.log(error.message))
+    fetchPokemon()
+      .then(pokemon => {
+        if(isActive){
+          setPokemonList(pokemon.results)
+        }
+      })
+      .catch((error) => setError(true))
   }, [])
 
-  if(pokemonList){
+  if(error){
+    return <p>Error fetching pokemon from API</p>
+  } else if (pokemonList) {
     return (
       <div className="App">
         <header className="header">
