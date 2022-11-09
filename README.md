@@ -13,11 +13,12 @@ App fetches a list of 20 Pokemon and displays the pokemon as a card with their n
 
 ## How to run this app 
 
-- `npm install` 
-- `npm start` 
-
-To see tests: 
-- `npm test`
+1. Clone repo on to your machine 
+2. CD into `pokemon-favorites`
+3. run `npm install'
+4. run `npm start` and to view tests `npm test` 
+5. visit `localhost:3000` to see app running locally
+t`
 
 ## My process
 1. Used Trello to list out deliverables and steps to achieve them 
