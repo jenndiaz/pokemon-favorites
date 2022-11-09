@@ -1,7 +1,10 @@
-# Pokemon Favorites
+# Pokemon Favorites  ♥️
  
 ## Description and funtionality 
-App fetches a list of 20 Pokemon and displays the pokemon as a card with their name, image, and weight. Pokemon cards are sorted alpabetically, order can be changes with sort by select element. Users can favorite a pokemon and see favorited pokemon in favorite section at top of page.   
+
+App fetches a list of 20 Pokemon and displays the pokemon as a card with their name, image, and weight. 
+- Users can favorite a pokemon, favorited pokemon are then disaplyed together in Your Favorites section 
+- Users can change the sort order from A - Z to Z - A
 
 ## Technical Details
 
@@ -27,3 +30,4 @@ To see tests:
 - Additional sorting by weight
 - Style loading indicators with a spinner animation 
 - further UI handling of Errors 
+- persist users favorite pokemon 
