@@ -20,6 +20,8 @@ App fetches a list of 20 Pokemon and displays the pokemon as a card with their n
 5. visit `localhost:3000` to see app running locally
 t`
 
+View app deployed with netlify: [pokemon-favorites.netlify.app/](https://pokemon-favorites.netlify.app/)
+
 ## My process
 1. Used Trello to list out deliverables and steps to achieve them 
 2. Used Figma to create wireframes for design of app
