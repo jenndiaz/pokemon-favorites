@@ -15,18 +15,14 @@ App fetches a list of 20 Pokemon and displays the pokemon as a card with their n
 
 1. Clone repo on to your machine 
 2. CD into `pokemon-favorites`
-3. run `npm install'
+3. run `npm install`
 4. run `npm start` and to view tests `npm test` 
 5. visit `localhost:3000` to see app running locally
-t`
 
 View app deployed with netlify: [pokemon-favorites.netlify.app/](https://pokemon-favorites.netlify.app/)
 
 ## My process
-1. Used Trello to list out deliverables and steps to achieve them 
-2. Used Figma to create wireframes for design of app
-3. Build out app 
-4. Refine and Refactor 
+I started by writting out all project deliverables into trello cards. I used Todo, Doing, and Done columns to organize these cards and updated thoughout the project as neccesary. Next I used Figma to create wireframes and start thinking about contrast and color palette. I then started building referencing the trello board throughout. 
 
 ## Future Features 
 - Ability to fetch another 20 pokemon with a `Load More` buttton
