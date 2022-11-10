@@ -10,18 +10,9 @@ function App ()  {
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    let isActive = true 
-
     fetchPokemon()
-      .then(pokemon => {
-        if(isActive){
-          setPokemonList(pokemon.results)
-        }
-      })
+      .then(pokemon => {setPokemonList(pokemon.results) })
       .catch((error) => setError(true))
-      return () => {
-        isActive = false
-      }
   }, [])
 
   if(error){
@@ -39,9 +30,8 @@ function App ()  {
       </div>
   )
   } else{
-    <p>Collecting Pokemon!</p>
+    return <p>Collecting Pokemon!</p>
   }
-
 
 }
 

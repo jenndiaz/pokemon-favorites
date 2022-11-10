@@ -9,22 +9,15 @@ function Card ({handleFavorites, favorites, pokemon}) {
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    let isActive = true
 
-    fetchPokemonDetails(pokemon.url)
-      .then(data => {
-        if(isActive) {
-          setData(data)
-        }
-      })
-      .catch((error) => setError(true))
-    return () => {
-      isActive = false
-    }
+  fetchPokemonDetails(pokemon.url)
+    .then(data => { setData(data)})
+    .catch((error) => setError(true))
+
   }, [pokemon])
 
   if(error){
-    return <p>Error fetching this pokemon details</p>
+    return <p>Error fetching this pokemon's details</p>
   } else if(data.length === 0){
     <div className='card' key={pokemon.name}>
       <h3>Loading Card...</h3>
