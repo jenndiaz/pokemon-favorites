@@ -19,7 +19,7 @@ function App ()  {
     return <p>Error fetching pokemon from API</p>
   } else if (pokemonList) {
     return (
-      <div className="App">
+      <div className="app">
         <header className="header">
           <img src={logo} className="header__logo" alt="Pokemon PokeBall logo" />
           <h1>Pokemon Favorites</h1>
