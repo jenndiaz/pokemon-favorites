@@ -4,7 +4,6 @@ export const fetchPokemon = () => {
     if (response.status === 200) return response.json()
     else throw new Error('Invalid Api response')
   })
-
 }
 
 export const fetchPokemonDetails = (url) => {
@@ -13,5 +12,4 @@ export const fetchPokemonDetails = (url) => {
     if (response.status === 200) return response.json()
     else throw new Error('Invalid Api response')
   })
-
 }

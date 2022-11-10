@@ -28,11 +28,10 @@ function App ()  {
           <PokemonCardContainer pokemonList={pokemonList} />
         </main>
       </div>
-  )
+    )
   } else{
     return <p>Collecting Pokemon!</p>
   }
-
 }
 
 export default App;
