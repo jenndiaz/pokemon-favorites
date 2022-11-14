@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Card from './Card'
 import FavoritesContainer from './FavoritesContainer'
 
-export default function PokemonCardContainer({pokemonList}) {
+export default function PokemonCardContainer({handleLoadMoreClick, offset, pokemonList}) {
 
   const [sortOrder, setSortOrder] = useState('ASC')
   const [favorites, setFavorites] = useState([])
@@ -34,12 +34,17 @@ export default function PokemonCardContainer({pokemonList}) {
   />
   ))
 
-
   return (
     <>
       <FavoritesContainer favoritedPokemon={favoritedPokemon} />
       <div className='sort-container'>
         <h2>All Pokemon</h2>
+        <div className='sort-container__load-more'>
+          <p>{`${offset + 20} Pokemon Displayed`}</p>
+          <button type="button" className='btn' onClick={handleLoadMoreClick}>
+            Load 20 More Pokemon
+          </button>
+        </div>
         <div>
           <label htmlFor='sort'>Sort By:</label>
           <select data-testid='select' className='btn' name='sort' id='sort' onChange={handleSortOnClick}>

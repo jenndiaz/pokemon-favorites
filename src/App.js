@@ -8,12 +8,17 @@ function App ()  {
 
   const [pokemonList, setPokemonList] = useState([])
   const [error, setError] = useState(false)
+  const [offset, setOffset] = useState(0)
 
   useEffect(() => {
-    fetchPokemon()
-      .then(pokemon => {setPokemonList(pokemon.results) })
+    fetchPokemon(offset)
+      .then(pokemon => {setPokemonList(pokemonList.concat(pokemon.results)) })
       .catch((error) => setError(true))
-  }, [])
+  }, [offset])
+
+  const handleLoadMoreClick = () => {
+    setOffset(offset + 20)
+  }
 
   if(error){
     return <p>Error fetching pokemon from API</p>
@@ -25,7 +30,7 @@ function App ()  {
           <h1>Pokemon Favorites</h1>
         </header>
         <main>
-          <PokemonCardContainer pokemonList={pokemonList} />
+          <PokemonCardContainer handleLoadMoreClick={handleLoadMoreClick} offset={offset} pokemonList={pokemonList} />
         </main>
       </div>
     )

@@ -50,6 +50,11 @@ h3{
   padding: 15px 0px;
 }
 
+.sort-container__load-more{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
 .card-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
