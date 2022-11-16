@@ -3,11 +3,11 @@ import { fetchPokemonDetails } from '../api'
 import heart from '../heart-icon.svg'
 import heartOutline from '../heart-line-icon.svg'
 
-function Card ({handleFavorites, favorites, pokemon}) {
+function Card ({handleFavorites, isFavorite, pokemon}) {
 
   const [data, setData] = useState([])
   const [error, setError] = useState(false)
-
+  
   useEffect(() => {
     fetchPokemonDetails(pokemon.url)
       .then(data => { setData(data)})
@@ -30,10 +30,10 @@ function Card ({handleFavorites, favorites, pokemon}) {
           type='button' 
           className='btn' 
           aria-label="Favorite" 
-          aria-pressed={favorites.includes(pokemon) ? true : false} 
+          aria-pressed={isFavorite ? true : false} 
           onClick={() => handleFavorites(pokemon)}
         >
-          <img className='btn__icon' alt="" src={favorites.includes(pokemon) ? heart : heartOutline} />
+          <img className='btn__icon' alt="" src={isFavorite ? heart : heartOutline} />
         </button>
       </div>
     )
