@@ -19,12 +19,10 @@ export default function PokemonCardContainer({pokemonList}) {
   const handleFavorites = (item) => {
     if(favoriteNames.includes(item.name)){
       const newFavorites = favorites.filter(removal => removal !== item)
-      console.log('should remove', newFavorites)
       setFavorites(newFavorites)
       localStorage.setItem('favorites', JSON.stringify(newFavorites))
     } else {
       const newFavorites = [...favorites, item]
-      console.log('should add', newFavorites)
       setFavorites(newFavorites)
       localStorage.setItem('favorites', JSON.stringify(newFavorites))
     }
