@@ -2,27 +2,27 @@
   outline: 2px solid #000000;
 }
 
-h3{
+h3 {
   text-transform: capitalize;
 }
 
-.app{
+.app {
   padding: 25px 75px;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.header__logo{
+.header__logo {
   width: 100px;
   height: auto;
 }
 
-.btn{
+.btn {
   border: 0;
   border-radius: 0.25rem;
   background: #E90101;
@@ -34,49 +34,48 @@ h3{
   font-weight: bold;
 }
 
-.btn:hover{
+.btn:hover {
   background: #C60101;
 }
 
-.btn__icon{
+.btn__icon {
   width: 25px;
   height: auto;
 }
 
-.sort-container{
+.sort-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0px;
 }
 
-.sort-container__load-more{
+.sort-container__load-more {
   display: flex;
   flex-direction: row;
   gap: 5px;
 }
-.card-container{
+.card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid;
+  border: 1px solid;
   border-radius: 15px;
-  border-width: 1px;
   padding: 10px;
 }
 
-.card__image{
+.card__image {
   height: 150px;
   width: auto;
 }
 
-.card__text{
+.card__text {
   font-weight: 600;
   font-size: 1.125rem;
 }
@@ -85,7 +84,7 @@ h3{
   .card-container {
     grid-template-columns: 1fr;
   }
-  .sort-container{
+  .sort-container {
     flex-direction: column;
   }
 }
